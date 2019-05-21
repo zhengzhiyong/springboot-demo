@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <script type="text/javascript" th:src="@{static/js/jquery/jquery-1.11.3.min.js}"></script>
+    <script type="text/javascript" th:src="@{static/md5.js}"></script>
+</head>
+<body>
+<div class="fix-box">
+    <p class="logo">会员登录</p>
+    <form name="form" th:action="@{/login}" method="post">
+        <div class="input-box">
+            <p class="ipt-l"><span>用户名：</span><input class="name" tip="请输入用户名" id="username" name="username" type="text"/></p>
+            <p class="ipt-l"><span>密码：</span><input class="pass" tip="请输入密码" id="password" name="password" type="password"/>
+            </p>
+            <input id="login" type="submit" value="Login" class="btn btn-primary"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>

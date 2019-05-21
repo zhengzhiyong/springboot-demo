@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: craftsman
+  thymeleaf:
+    prefix: classpath:/templates/
+    servlet:
+      content-type: text/html
+    suffix: .html
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+
+security:
+  browser:
+    loginPage: /login
+    defaultFailureUrl: /login?error
