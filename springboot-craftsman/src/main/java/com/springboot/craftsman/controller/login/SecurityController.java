@@ -6,7 +6,7 @@ package com.springboot.craftsman.controller.login;
  * Created by Fant.J.
  */
 
-import com.springboot.craftsman.common.page.SimpleResponse;
+import com.springboot.craftsman.common.page.RespModel;
 import com.springboot.craftsman.configuration.security.SecurityProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +30,7 @@ import java.io.IOException;
  */
 @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
 @RestController
-public class BrowerSecurityController {
+public class SecurityController {
 
     /**
      * 日志
@@ -56,7 +56,7 @@ public class BrowerSecurityController {
      * 当需要身份认证时 跳转到这里
      */
     @RequestMapping("/authentication")
-    public SimpleResponse requireAuthentication(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public RespModel requireAuthentication(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //拿到请求对象
         SavedRequest savedRequest = requestCache.getRequest(request, response);
         if (savedRequest != null){
@@ -67,7 +67,7 @@ public class BrowerSecurityController {
             redirectStrategy.sendRedirect(request,response,redirectUrl);
         }
         //如果不是，返回一个json 字符串
-        return new SimpleResponse("访问的服务需要身份认证，请引导用户到登录页");
+        return new RespModel().success("访问的服务需要身份认证，请引导用户到登录页");
     }
 }
 

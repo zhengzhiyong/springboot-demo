@@ -23,3 +23,5 @@ public class SecurityProperties {
         this.browser = browser;
     }
 }
+
+

@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * UserDetail 类
- * Created by Fant.J.
+ * Created by Zhengzy
  */
 @Component
 public class MyUserDetailsService implements UserDetailsService {

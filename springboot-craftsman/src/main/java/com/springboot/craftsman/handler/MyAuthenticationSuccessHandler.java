@@ -17,7 +17,7 @@ import java.io.IOException;
 
 /**
  * 自定义登录成功处理类
- * Created by Fant.J.
+ * Created by Zhengzy
  */
 @Component
 public class MyAuthenticationSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {

@@ -17,7 +17,7 @@ import java.io.IOException;
 
 /**
  * 自定义登录失败处理器
- * Created by Fant.J.
+ * Created by Zhengzy
  */
 @Component
 public class MyAuthenticationFailHandler extends SimpleUrlAuthenticationFailureHandler {

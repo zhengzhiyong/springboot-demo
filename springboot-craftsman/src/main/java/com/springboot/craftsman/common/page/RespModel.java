@@ -57,6 +57,11 @@ public class RespModel {
         this.desc = desc;
     }
 
+    public RespModel(int code,  Object rows) {
+        this.code = code;
+        this.rows = rows;
+    }
+
     public RespModel(int code, String desc, Object rows) {
         this.code = code;
         this.desc = desc;

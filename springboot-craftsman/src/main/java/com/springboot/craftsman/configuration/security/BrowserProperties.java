@@ -1,18 +1,20 @@
 package com.springboot.craftsman.configuration.security;
 
 import com.springboot.craftsman.common.LoginType;
+import org.springframework.beans.factory.annotation.Value;
 
 /**
- * browser(浏览器)配置文件里的： fantJ.security.browser.loginPage 属性类
- * Created by Fant.J.
+ *
+ * Created by zhengzy
  */
 public class BrowserProperties {
 
     /**
-     *  loginPage 默认值  是login.html
-     *  如果 application.properties 里有对 fantJ.security.browser.loginPage 的声明，则获取该值
+     *  loginPage 默认值  是login
+     *  如果 application.properties 里有对 security.browser.loginPage 的声明，则获取该值
      */
-    private String loginPage = "/browser-login.html";
+    @Value("${security.browser.loginPage}")
+    private String loginPage;
 
     /**
      * 默认 返回 json 类型
