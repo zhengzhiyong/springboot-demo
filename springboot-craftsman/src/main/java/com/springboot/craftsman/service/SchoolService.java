@@ -1,7 +1,6 @@
 package com.springboot.craftsman.service;
 
 import com.springboot.craftsman.base.BootySchoolPO;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 

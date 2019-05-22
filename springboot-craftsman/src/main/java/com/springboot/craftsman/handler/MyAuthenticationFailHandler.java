@@ -3,8 +3,6 @@ package com.springboot.craftsman.handler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.springboot.craftsman.common.LoginType;
 import com.springboot.craftsman.configuration.security.SecurityProperties;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;

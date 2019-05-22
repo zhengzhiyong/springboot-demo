@@ -5,7 +5,6 @@ import com.springboot.craftsman.dao.mapper.SchoolMapper;
 import com.springboot.craftsman.service.SchoolService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service

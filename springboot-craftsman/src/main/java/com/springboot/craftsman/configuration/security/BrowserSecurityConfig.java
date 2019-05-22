@@ -19,7 +19,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  * Created by Zhengzy
  */
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)//开启security注解
+//开启security注解
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
 
     /**
@@ -62,30 +63,29 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
 
         //表单登录 方式
         http.formLogin()
-                .loginPage("/login").permitAll()
-                //登录需要经过的url请求
-                .loginProcessingUrl("/login").permitAll()
-                .successHandler(mySuccessHandler)
-                .failureHandler(myFailHandler)
-                .and()
-                .logout().permitAll().invalidateHttpSession(true)
-                .deleteCookies("JSESSIONID").logoutSuccessHandler(myLogoutSuccessHandler)
-                //.and().sessionManagement().maximumSessions(10).expiredUrl("/tologin")
-                .and()
-                //请求授权
-                .authorizeRequests()
-                //不需要权限认证的url
-                .antMatchers("/login",redirectUrl).permitAll()
-                .antMatchers("/static/**",redirectUrl).permitAll()
-                //任何请求
-                .anyRequest()
-                //需要身份认证
-                .authenticated()
-                .and()
-                //关闭跨站请求防护
-                .csrf().disable();
+            .loginPage("/login").permitAll()
+            //登录需要经过的url请求
+            .loginProcessingUrl("/login").permitAll()
+            .successHandler(mySuccessHandler)
+            .failureHandler(myFailHandler)
+            .and()
+            .logout().permitAll().invalidateHttpSession(true)
+            .deleteCookies("JSESSIONID").logoutSuccessHandler(myLogoutSuccessHandler)
+            //.and().sessionManagement().maximumSessions(10).expiredUrl("/tologin")
+            .and()
+            //请求授权
+            .authorizeRequests()
+            //不需要权限认证的url
+            .antMatchers("/login",redirectUrl).permitAll()
+            .antMatchers("/static/**",redirectUrl).permitAll()
+            //任何请求
+            .anyRequest()
+            //需要身份认证
+            .authenticated()
+            .and()
+            //关闭跨站请求防护
+            .csrf().disable();
     }
-
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {

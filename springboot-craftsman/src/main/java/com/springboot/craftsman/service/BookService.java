@@ -2,7 +2,6 @@ package com.springboot.craftsman.service;
 
 import com.github.pagehelper.PageInfo;
 import com.springboot.craftsman.base.BootyBookPO;
-import com.springboot.craftsman.base.BootySchoolPO;
 
 import java.util.List;
 

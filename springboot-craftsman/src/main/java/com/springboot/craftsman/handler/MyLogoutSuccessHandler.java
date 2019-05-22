@@ -31,7 +31,7 @@ public class MyLogoutSuccessHandler implements LogoutSuccessHandler {
     private SecurityProperties securityProperties;
 
     @Override
-    public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+    public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException {
         logger.info("退出系统成功");
         //httpServletResponse.sendRedirect("/logout");
         httpServletResponse.sendRedirect("/");

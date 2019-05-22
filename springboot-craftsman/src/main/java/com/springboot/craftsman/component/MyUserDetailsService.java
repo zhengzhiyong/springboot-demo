@@ -35,6 +35,8 @@ public class MyUserDetailsService implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        logger.info("登录，进入loadUserByUsername()");
+
         UserPO user = new UserPO();
         List<GrantedAuthority> list = AuthorityUtils.createAuthorityList("admin_role"); //所谓的角色，只是增加ROLE_前缀
         user.setAuthorities(list);

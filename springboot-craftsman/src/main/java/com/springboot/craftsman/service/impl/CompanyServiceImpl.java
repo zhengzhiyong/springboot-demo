@@ -5,7 +5,6 @@ import com.springboot.craftsman.dao.mapper.CompanyMapper;
 import com.springboot.craftsman.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.logging.Logger;
 
 @Service

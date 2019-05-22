@@ -4,8 +4,6 @@ import com.github.pagehelper.Page;
 import com.springboot.craftsman.base.BootyBookPO;
 import org.apache.ibatis.annotations.*;
 
-import java.util.List;
-
 /**
  *
  * https://blog.csdn.net/kingice1014/article/details/70263148
@@ -52,12 +50,13 @@ public interface BookMapper {
     })
     BootyBookPO getBookById(@Param("id") Long id);
 
+
     @Insert("insert into BOOTY_BOOK values(#{id},#{name},#{author},#{bookNo},#{isDamage},#{isLend},#{introduction})")
     int insertBook(@Param("id") Long id, @Param("name") String name, @Param("author") String author, @Param("bookNo") String bookNo, @Param("isDamage") int isDamage, @Param("isLend") int isLend, @Param("introduction") String introduction);
 
 
-//    @Insert("insert into BOOTY_BOOK values(#{book.id},#{book.name},#{book.author},#{book.bookNo},#{book.isDamage},#{book.isLend},#{book.introduction})")
-//    int insertBook2(@Param("book") BootyBookPO book);
+    //@Insert("insert into BOOTY_BOOK values(#{book.id},#{book.name},#{book.author},#{book.bookNo},#{book.isDamage},#{book.isLend},#{book.introduction})")
+    //int insertBook2(@Param("book") BootyBookPO book);
 
     //主键自增法;将数据库中di设为自增类型即可
     @Insert("insert into BOOTY_BOOK  (name,author,book_no,is_damage,is_lend,introduction) values(#{book.name},#{book.author},#{book.bookNo},#{book.isDamage},#{book.isLend},#{book.introduction})")

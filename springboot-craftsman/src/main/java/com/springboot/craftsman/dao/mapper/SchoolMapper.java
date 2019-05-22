@@ -57,8 +57,6 @@ public interface SchoolMapper{
     @Insert("insert into booty_school values(#{id},#{name},#{star},#{address},#{teacher_number},#{student_number},#{introduction})")
     int insertBootySchool(@Param("id") Long id, @Param("name") String name, @Param("star") int star, @Param("address") String address, @Param("teacher_number") int teacherNumber, @Param("student_number") int studentNumber, @Param("introduction") String introduction);
 
-
     @Delete("delete from booty_school where id = #{id} ")
     int deleteBootySchoolById(@Param("id") Long id);
-
 }
