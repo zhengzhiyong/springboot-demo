@@ -22,7 +22,7 @@ public class BookController {
         return new RespModel(RespModel.RespCode.SUCCESS.getCode(),book);
     }
 
-    @RequestMapping(value = "getBookList")
+    @GetMapping(value = "getBookList")
     @ResponseBody
     public PageRespModel getBookList(int startRow, int pageSize){
         PageInfo<BootyBookPO> books = bookService.getBookList(startRow,pageSize);
@@ -32,7 +32,7 @@ public class BookController {
         return model;
     }
 
-    @RequestMapping(value = "update")
+    @PostMapping(value = "update")
     @ResponseBody
     public RespModel update(BootyBookPO bookPO){
         RespModel respModel = new RespModel();
@@ -41,7 +41,7 @@ public class BookController {
     }
 
 
-    @RequestMapping(value = "add")
+    @PostMapping(value = "add")
     @ResponseBody
     public RespModel add(BootyBookPO bookPO){
         RespModel respModel = new RespModel();
@@ -49,7 +49,7 @@ public class BookController {
         return respModel;
     }
 
-    @RequestMapping(value = "delete/{id}")
+    @PostMapping(value = "delete/{id}")
     @ResponseBody
     public RespModel delete(@PathVariable(value = "id") Long id){
         RespModel respModel = new RespModel();

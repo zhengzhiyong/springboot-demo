@@ -50,10 +50,8 @@ public interface BookMapper {
     })
     BootyBookPO getBookById(@Param("id") Long id);
 
-
     @Insert("insert into BOOTY_BOOK values(#{id},#{name},#{author},#{bookNo},#{isDamage},#{isLend},#{introduction})")
     int insertBook(@Param("id") Long id, @Param("name") String name, @Param("author") String author, @Param("bookNo") String bookNo, @Param("isDamage") int isDamage, @Param("isLend") int isLend, @Param("introduction") String introduction);
-
 
     //@Insert("insert into BOOTY_BOOK values(#{book.id},#{book.name},#{book.author},#{book.bookNo},#{book.isDamage},#{book.isLend},#{book.introduction})")
     //int insertBook2(@Param("book") BootyBookPO book);

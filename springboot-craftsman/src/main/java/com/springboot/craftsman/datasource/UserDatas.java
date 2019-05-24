@@ -10,6 +10,7 @@ public class UserDatas {
     private UserDatas(){}
 
     private static class UserDataHolder{
+
         private static final List<String> getUserNameList (){
             List<String> userNameList = new ArrayList<>(64);
             userNameList.add("admin");
@@ -31,6 +32,7 @@ public class UserDatas {
              }
              return userList;
          }
+
     }
 
     public static final List<UserPO> getUserList(){
