@@ -13,7 +13,7 @@
         <java.version>1.8</java.version>
         <mysql.version>8.0.16</mysql.version>
         <mybatis.version>2.0.1</mybatis.version>
-        <spring.boot.version>2.1.5.RELEASE</spring.boot.version>
+        <spring.boot.version>2.5.12</spring.boot.version>
         <spring.boot.kafka.version>2.2.6.RELEASE</spring.boot.kafka.version>
         <spring.boot.security.vresion>5.1.5.RELEASE</spring.boot.security.vresion>
         <scope.runtime>runtime</scope.runtime>
